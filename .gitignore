@@ -1,0 +1,10 @@
+# Motion datasets and converted motion files.
+/LAFAN1_Retargeting_Dataset/
+*.npz
+
+# Python caches and local environments.
+__pycache__/
+*.py[cod]
+.cache/
+.pytest_cache/
+.venv/
