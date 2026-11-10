@@ -11,7 +11,7 @@ An independent, work-in-progress reimplementation of [SuperMimic](https://superm
 - Actor–critic training, domain randomization, adaptive motion reset sampling, checkpoint playback, and optional W&B logging.
 - An experimental Koopman world-model variant alongside the MLP dynamics model.
 
-The examples below use the MLP local-frame run: 256 parallel environments, an 8-step dynamics training window, and a 32-step imagination horizon at 50 Hz.
+The examples below use the MLP local-frame run on **one NVIDIA GeForce RTX 3090 (24 GB VRAM)**: 256 parallel environments, an 8-step dynamics training window, and a 32-step imagination horizon at 50 Hz.
 
 ## Policy rollouts
 
@@ -38,6 +38,12 @@ Simulation on the left; learned dynamics on the right, with the reference motion
 Logged results from `g1_local_frame`. The world-model loss shows raw values and a 100-iteration moving average. Evaluation covers all 40 training motion clips, so these curves measure training-motion tracking rather than held-out generalization.
 
 ![World-model loss, normalized evaluation return, and tracking failures](docs/assets/training_curves.png)
+
+The same metrics against wall-clock time on the RTX 3090:
+
+![World-model loss, normalized evaluation return, and tracking failures versus elapsed hours](docs/assets/training_curves_wall_clock.png)
+
+Time comes from the logged training-loop timer, which starts after initialization and warm-up. Evaluation points use the timestamp recorded just before that evaluation; prior evaluations and checkpoint saves count toward elapsed time.
 
 ## Running it
 

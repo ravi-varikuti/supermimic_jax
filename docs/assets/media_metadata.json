@@ -35,5 +35,17 @@
       "first_failure_step": null
     }
   },
-  "evaluation_split": "training motions; no held-out validation"
+  "evaluation_split": "training motions; no held-out validation",
+  "training_hardware": {
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_count": 1,
+    "gpu_memory_gib": 24.0
+  },
+  "wall_clock_chart": {
+    "time_source": "metrics.jsonl elapsed_s",
+    "unit": "hours",
+    "starts_after": "initialization and warm-up",
+    "evaluation_timestamp": "recorded before the corresponding evaluation",
+    "last_elapsed_hours": 2.691575998938901
+  }
 }
