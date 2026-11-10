@@ -16,7 +16,10 @@
   },
   "world_model_horizon_steps": 32,
   "world_model_playback_speed": 0.5,
-  "reference_overlay": "cyan, world-aligned, opacity 0.45",
+  "reference_overlay": {
+    "policy_gifs": "cyan, world-aligned, opacity 0.45",
+    "world_model_gif": null
+  },
   "last_logged_iteration": 12999,
   "last_evaluation_iteration": 12000,
   "long_dance_rollouts": {
@@ -46,6 +49,9 @@
     "unit": "hours",
     "starts_after": "initialization and warm-up",
     "evaluation_timestamp": "recorded before the corresponding evaluation",
-    "last_elapsed_hours": 2.691575998938901
-  }
+    "last_elapsed_hours": 2.691575998938901,
+    "training_reward": "collected_reward: mean reward per collected control step",
+    "smoothing": "100-iteration moving average for reward and world-model loss; raw traces also shown"
+  },
+  "world_model_comparison_source": "original comparison from commit 7b62988"
 }

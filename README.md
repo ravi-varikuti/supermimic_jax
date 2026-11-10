@@ -29,19 +29,15 @@ The dance demos each show 30 continuous seconds without resets, starting three s
 
 ## World-model predictions
 
-Simulation on the left; learned dynamics on the right, with the reference motion overlaid in cyan in both panels. Both receive the same policy actions. Each prediction starts from the simulator state, then runs open loop for 32 steps (0.64 seconds) before being reseeded. Shown at half speed to make drift easier to inspect.
+Simulation on the left; learned dynamics on the right. Both receive the same policy actions. Each prediction starts from the simulator state, then runs open loop for 32 steps (0.64 seconds) before being reseeded. Shown at half speed to make drift easier to inspect.
 
 ![MuJoCo simulation and open-loop world-model predictions](docs/assets/world_model.gif)
 
 ## Training curves
 
-Logged results from `g1_local_frame`. The world-model loss shows raw values and a 100-iteration moving average. Evaluation covers all 40 training motion clips, so these curves measure training-motion tracking rather than held-out generalization.
+Logged results from `g1_local_frame` against wall-clock time on the RTX 3090. Training reward is the mean collected reward per control step. Reward and world-model loss show raw values and a 100-iteration moving average. Evaluation covers all 40 training motion clips, so these curves measure training-motion tracking rather than held-out generalization.
 
-![World-model loss, normalized evaluation return, and tracking failures](docs/assets/training_curves.png)
-
-The same metrics against wall-clock time on the RTX 3090:
-
-![World-model loss, normalized evaluation return, and tracking failures versus elapsed hours](docs/assets/training_curves_wall_clock.png)
+![Training reward, world-model loss, normalized evaluation return, and tracking failures versus elapsed hours](docs/assets/training_curves_wall_clock.png)
 
 Time comes from the logged training-loop timer, which starts after initialization and warm-up. Evaluation points use the timestamp recorded just before that evaluation; prior evaluations and checkpoint saves count toward elapsed time.
 
