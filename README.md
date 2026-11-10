@@ -35,9 +35,9 @@ Simulation on the left; learned dynamics on the right. Both receive the same pol
 
 ## Training curves
 
-Logged results from `g1_local_frame` against wall-clock time on the RTX 3090. Training reward is the mean collected reward per control step divided by `5 × dt = 0.1`, using the same reward normalization as evaluation. Reward and world-model loss show unsmoothed values and a 100-iteration moving average. Evaluation covers all 40 training motion clips, so these curves measure training-motion tracking rather than held-out generalization.
+Logged results from `g1_local_frame` against wall-clock time on the RTX 3090. Reward and world-model loss show unsmoothed values and a 100-iteration moving average. Evaluation covers all 40 training motion clips, so these curves measure training-motion tracking rather than held-out generalization.
 
-![Training reward, world-model loss, normalized evaluation return, and tracking failures versus elapsed hours](docs/assets/training_curves_wall_clock.png)
+![Training reward, world-model loss, evaluation return, and tracking failures versus elapsed hours](docs/assets/training_progress.png)
 
 Time comes from the logged training-loop timer, which starts after initialization and warm-up. Evaluation points use the timestamp recorded just before that evaluation; prior evaluations and checkpoint saves count toward elapsed time.
 
