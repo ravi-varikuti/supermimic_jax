@@ -54,5 +54,18 @@
     "smoothing": "100-iteration moving average for reward and world-model loss; raw traces also shown",
     "training_reward_normalization_divisor": 0.1
   },
-  "world_model_comparison_source": "original comparison from commit 7b62988"
+  "world_model_comparison_source": "original comparison from commit 7b62988",
+  "additional_world_model_comparison": {
+    "file": "world_model_dance.gif",
+    "checkpoint_iteration": 12000,
+    "motion_id": 3,
+    "motion": "dance2_subject1",
+    "start_seconds": 26.0,
+    "duration_seconds": 2.56,
+    "horizon_steps": 32,
+    "playback_speed": 0.5,
+    "reference_overlay": null,
+    "all_predictions_finite": true,
+    "simulator_first_failure_step": null
+  }
 }
