@@ -4,12 +4,36 @@
   "policy_clips": {
     "dance": 0,
     "walk": 28,
-    "run": 22
+    "run": 22,
+    "dance2": 3
   },
   "policy_start_seconds": 3,
-  "policy_seconds": 4,
+  "policy_seconds": {
+    "dance": 30,
+    "dance2": 30,
+    "walk": 4,
+    "run": 4
+  },
   "world_model_horizon_steps": 32,
   "world_model_playback_speed": 0.5,
+  "reference_overlay": "cyan, world-aligned, opacity 0.45",
   "last_logged_iteration": 12999,
-  "last_evaluation_iteration": 12000
+  "last_evaluation_iteration": 12000,
+  "long_dance_rollouts": {
+    "dance": {
+      "motion_id": 0,
+      "motion": "dance1_subject1",
+      "start_seconds": 3,
+      "duration_seconds": 30,
+      "first_failure_step": null
+    },
+    "dance2": {
+      "motion_id": 3,
+      "motion": "dance2_subject1",
+      "start_seconds": 3,
+      "duration_seconds": 30,
+      "first_failure_step": null
+    }
+  },
+  "evaluation_split": "training motions; no held-out validation"
 }

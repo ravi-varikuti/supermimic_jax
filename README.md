@@ -15,15 +15,21 @@ The examples below use the MLP local-frame run: 256 parallel environments, an 8-
 
 ## Policy rollouts
 
-Four-second excerpts from the iteration-12,000 checkpoint in native MuJoCo, with deterministic actions.
+Rollouts from the iteration-12,000 checkpoint in native MuJoCo, with deterministic actions. The cyan overlay shows the reference motion.
 
-| Dance | Walk | Run |
-| :---: | :---: | :---: |
-| ![G1 dance policy rollout](docs/assets/policy_dance.gif) | ![G1 walking policy rollout](docs/assets/policy_walk.gif) | ![G1 running policy rollout](docs/assets/policy_run.gif) |
+The dance demos each show 30 continuous seconds without resets, starting three seconds into the clip. These evaluate existing training motions; there is no held-out validation split in this run.
+
+| Dance 1 · 30 seconds | Dance 2 · 30 seconds |
+| :---: | :---: |
+| ![G1 dance1_subject1 long policy rollout with cyan reference](docs/assets/policy_dance.gif) | ![G1 dance2_subject1 long policy rollout with cyan reference](docs/assets/policy_dance2.gif) |
+
+| Walk · 4 seconds | Run · 4 seconds |
+| :---: | :---: |
+| ![G1 walking policy rollout](docs/assets/policy_walk.gif) | ![G1 running policy rollout](docs/assets/policy_run.gif) |
 
 ## World-model predictions
 
-Simulation on the left; learned dynamics on the right. Both receive the same policy actions. Each prediction starts from the simulator state, then runs open loop for 32 steps (0.64 seconds) before being reseeded. Shown at half speed to make drift easier to inspect.
+Simulation on the left; learned dynamics on the right, with the reference motion overlaid in cyan in both panels. Both receive the same policy actions. Each prediction starts from the simulator state, then runs open loop for 32 steps (0.64 seconds) before being reseeded. Shown at half speed to make drift easier to inspect.
 
 ![MuJoCo simulation and open-loop world-model predictions](docs/assets/world_model.gif)
 
@@ -53,4 +59,4 @@ Motion data and checkpoints are not included in this repository.
 
 ## Acknowledgments
 
-Based on SuperMimic, using retargeted LAFAN1 motions and Unitree G1 assets. [Uni-SuperMimic](https://github.com/Motphys/Uni-SuperMimic) informed several implementation choices.
+Based on SuperMimic, using retargeted LAFAN1 motions and Unitree G1 assets.
