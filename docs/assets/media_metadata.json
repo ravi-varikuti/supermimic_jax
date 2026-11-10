@@ -1,0 +1,15 @@
+{
+  "run": "g1_local_frame",
+  "checkpoint_iteration": 12000,
+  "policy_clips": {
+    "dance": 0,
+    "walk": 28,
+    "run": 22
+  },
+  "policy_start_seconds": 3,
+  "policy_seconds": 4,
+  "world_model_horizon_steps": 32,
+  "world_model_playback_speed": 0.5,
+  "last_logged_iteration": 12999,
+  "last_evaluation_iteration": 12000
+}
