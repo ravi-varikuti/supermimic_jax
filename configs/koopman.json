@@ -1,0 +1,9 @@
+{
+  "world_model_type": "koopman",
+  "koopman_features": 128,
+  "koopman_encoder_hidden": [256, 256],
+  "koopman_one_step_weight": 1.0,
+  "koopman_multi_step_weight": 1.0,
+  "koopman_latent_weight": 0.1,
+  "window": 8
+}

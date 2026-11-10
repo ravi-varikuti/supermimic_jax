@@ -15,5 +15,5 @@
     <light pos="0 0 1.5" dir="0 0 -1" directional="true" />
     <geom name="floor" size="0 0 0.05" type="plane" material="groundplane" />
   </worldbody>
-  <option timestep="0.005" integrator="implicitfast" cone="pyramidal" solver="Newton" jacobian="auto" iterations="10" ls_iterations="50" tolerance="1e-8" ls_tolerance="0.01" ccd_iterations="50" impratio="1" gravity="0 0 -9.81" />
+  <option timestep="0.005" integrator="implicitfast" cone="pyramidal" solver="Newton" jacobian="auto" iterations="20" ls_iterations="50" tolerance="1e-8" ls_tolerance="0.01" ccd_iterations="50" impratio="1" gravity="0 0 -9.81" />
 </mujoco>

@@ -53,7 +53,13 @@ Time comes from the logged training-loop timer, which starts after initializatio
 
 ## Running it
 
-The code uses JAX, Flax, Optax, MuJoCo/MJX with Warp, and Viser for interactive playback. Place the retargeted G1 LAFAN1 CSVs in `LAFAN1_Retargeting_Dataset/g1/`, then convert and train:
+The code uses JAX, Flax, Optax, MuJoCo/MJX with Warp, and Viser for interactive playback. Install a CUDA-enabled build of JAX for your system, then install the dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Place the retargeted G1 LAFAN1 CSVs in `LAFAN1_Retargeting_Dataset/g1/`, then convert and train:
 
 ```bash
 python convert_g1_to_npz.py
@@ -68,6 +74,12 @@ python scripts/compare_model.py --checkpoint runs/g1_local_frame/latest.ckpt
 ```
 
 Motion data and checkpoints are not included in this repository.
+
+The training entry point is [train.py](train.py); presets are in [train_config.py](train_config.py). Run the CPU tests with:
+
+```bash
+JAX_PLATFORMS=cpu python -m unittest discover -s tests
+```
 
 ## Acknowledgments
 
