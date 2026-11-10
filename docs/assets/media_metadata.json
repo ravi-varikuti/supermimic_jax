@@ -3,16 +3,19 @@
   "checkpoint_iteration": 12000,
   "policy_clips": {
     "dance": 0,
-    "walk": 28,
-    "run": 22,
-    "dance2": 3
+    "dance2": 3,
+    "jumps": 19,
+    "fight": 16,
+    "sports": 17,
+    "getup": 8
   },
-  "policy_start_seconds": 3,
   "policy_seconds": {
     "dance": 30,
     "dance2": 30,
-    "walk": 4,
-    "run": 4
+    "jumps": 30,
+    "fight": 30,
+    "sports": 30,
+    "getup": 30
   },
   "world_model_horizon_steps": 32,
   "world_model_playback_speed": 0.5,
@@ -67,5 +70,51 @@
     "reference_overlay": null,
     "all_predictions_finite": true,
     "simulator_first_failure_step": null
+  },
+  "dynamic_policy_rollouts": {
+    "jumps": {
+      "motion_id": 19,
+      "motion": "jumps1_subject1",
+      "start_seconds": 15,
+      "duration_seconds": 30,
+      "first_failure_step": null,
+      "continues_after_tracking_failure": true,
+      "all_simulator_states_finite": true
+    },
+    "fight": {
+      "motion_id": 16,
+      "motion": "fight1_subject5",
+      "start_seconds": 15,
+      "duration_seconds": 30,
+      "first_failure_step": null,
+      "continues_after_tracking_failure": true,
+      "all_simulator_states_finite": true
+    },
+    "sports": {
+      "motion_id": 17,
+      "motion": "fightAndSports1_subject1",
+      "start_seconds": 15,
+      "duration_seconds": 30,
+      "first_failure_step": null,
+      "continues_after_tracking_failure": true,
+      "all_simulator_states_finite": true
+    },
+    "getup": {
+      "motion_id": 8,
+      "motion": "fallAndGetUp1_subject1",
+      "start_seconds": 15,
+      "duration_seconds": 30,
+      "first_failure_step": 1851,
+      "continues_after_tracking_failure": true,
+      "all_simulator_states_finite": true
+    }
+  },
+  "policy_start_seconds_by_clip": {
+    "dance": 3,
+    "dance2": 3,
+    "jumps": 15,
+    "fight": 15,
+    "sports": 15,
+    "getup": 15
   }
 }

@@ -17,15 +17,21 @@ The examples below use the MLP local-frame run on **one NVIDIA GeForce RTX 3090 
 
 Rollouts from the iteration-12,000 checkpoint in native MuJoCo, with deterministic actions. The cyan overlay shows the reference motion.
 
-The dance demos each show 30 continuous seconds without resets, starting three seconds into the clip. These evaluate existing training motions; there is no held-out validation split in this run.
+Each demo shows 30 continuous seconds without resets. Dance excerpts start three seconds into the clip; the other excerpts start at 15 seconds. These evaluate existing training motions; there is no held-out validation split in this run.
 
 | Dance 1 · 30 seconds | Dance 2 · 30 seconds |
 | :---: | :---: |
 | ![G1 dance1_subject1 long policy rollout with cyan reference](docs/assets/policy_dance.gif) | ![G1 dance2_subject1 long policy rollout with cyan reference](docs/assets/policy_dance2.gif) |
 
-| Walk · 4 seconds | Run · 4 seconds |
+| Jumps · 30 seconds | Fighting · 30 seconds |
 | :---: | :---: |
-| ![G1 walking policy rollout](docs/assets/policy_walk.gif) | ![G1 running policy rollout](docs/assets/policy_run.gif) |
+| ![G1 jumping policy rollout with cyan reference](docs/assets/policy_jumps.gif) | ![G1 fighting policy rollout with cyan reference](docs/assets/policy_fight.gif) |
+
+| Fighting/sports · 30 seconds | Fall-and-get-up · 30 seconds |
+| :---: | :---: |
+| ![G1 fighting and sports policy rollout with cyan reference](docs/assets/policy_sports.gif) | ![G1 fall-and-get-up policy rollout with cyan reference](docs/assets/policy_getup.gif) |
+
+Fall-and-get-up tracking remains a work in progress. Any tracking failure is marked in the GIF; playback continues to show the resulting behavior.
 
 ## World-model predictions
 
